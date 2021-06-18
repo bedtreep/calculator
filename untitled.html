@@ -13,17 +13,15 @@
     </div>
     <div class="main">
         <h2>Items</h2>
-        <ul>
-            <li>Photo 200$ <img src="close.svg"></li>
-            <li>Jonny 120$ <img src="close.svg"></li>
-            <li>Reddit 2122$ <img src="close.svg"></li>
-            <li>Goat 210$<img src="close.svg"></li>
-            <li>Pants 100$ <img src="close.svg"></li>
+        <ul id="list">
+            
         </ul>
-        <input type="text" name="new" placeholder="Name"></br>
-        <input type="number" name="price" placeholder="1000"></br>
-        <button>Add new item</button>
-
+        <p class="total">Total <span id="sum"></span>&#8372;</p>
+        <form method="get">
+        <input id="item_name" type="text" name="name" placeholder="Name"></br>
+        <input id="amount" type="number" name="price" placeholder="1000"></br>
+        <button id="accept">Add new item</button>
+        </form>
     </div>
         <script type="text/javascript" src="untitled.js"></script>
  </body>

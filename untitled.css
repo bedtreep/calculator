@@ -74,6 +74,12 @@ body {
 	font-size: 21px;
 	font-weight: bolder;
 	color: white;
+	cursor: pointer;
+}
+
+.main button:active{
+	position: relative;
+	top: 1px;
 }
 
 input {
@@ -86,6 +92,14 @@ input {
 	border-radius: 10px;
 	font-size: 21px;
 	font-weight: bolder;
+}
+
+.total {
+	font-size: 28px;
+	font-weight: bolder;
+	margin-left: 100px;
+	margin-bottom: 40px;
+	margin-top: 40px;
 }
 
 @keyframes gradient {

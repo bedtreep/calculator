@@ -7,7 +7,37 @@ var accept = document.getElementById("accept");
 var i=0;
 var totalAmount = 0;
 var integer;
+var listItems = document.getElementsByTagName('li');
 
+if(!localStorage.getItem("items")) {
+	console.log("bye");
+  populateStorage();
+} else {
+	console.log("sosi");
+  setStyles();
+}
+
+function populateStorage() {
+  localStorage.setItem("items", JSON.stringify(items));
+  localStorage.setItem("totalsum", totalAmount);
+  setStyles();
+}
+
+function setStyles() {
+	var newitems = JSON.parse(localStorage.getItem("items"));
+	var newtotalAmount = localStorage.getItem("totalsum");
+	while( list.firstChild ){
+  list.removeChild( list.firstChild );
+}
+	for (var k = 0; k <newitems.length; k++) {
+		var li = document.createElement("li");
+		li.appendChild(document.createTextNode(newitems[k].join(" - ") + "₴"));
+		list.appendChild(li);
+	}
+	items = newitems;
+	totalAmount = parseInt(newtotalAmount, 10);
+	sum.innerHTML = totalAmount;
+}
 
 function newItem(e) {
 	const n = itemName.value;
@@ -20,6 +50,8 @@ function newItem(e) {
 	li.appendChild(document.createTextNode(items[i].join(" - ") + "₴"));
 	list.appendChild(li);
 	i++;
+	amount.value = "";
+	itemName.value = "";
 	e.preventDefault();
 }
 
@@ -33,6 +65,9 @@ function updateSum(e) {
 	e.preventDefault();
 }
 
+
 accept.addEventListener("click", newItem);
 accept.addEventListener("click", updateSum);
+accept.addEventListener("click", populateStorage);
+
 

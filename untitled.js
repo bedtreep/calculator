@@ -24,12 +24,13 @@ function newItem(e) {
 }
 
 
-function updateSum() {
+function updateSum(e) {
 	for (var u = 0; u < items.length; u++) {
 		integer = parseInt(items[u][1], 10);
 	}
 	totalAmount = totalAmount + integer;
 	sum.innerHTML = totalAmount;
+	e.preventDefault();
 }
 
 accept.addEventListener("click", newItem);

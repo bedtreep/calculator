@@ -11,7 +11,7 @@ var listItems = document.getElementsByTagName('li');
 var clear = document.getElementsByClassName("clear");
 var main = document.getElementsByClassName("main");
 var buttonColor = "rgb(10, 2, 107)";
-var nightIcon = document.getElementsByTagName("i");
+var nightIcon = document.getElementById("dark");
 var darkMode = false;
 var header = document.getElementsByClassName("header");
 
@@ -157,8 +157,8 @@ function darkmodeEnable(){
 		itemName.style.color = "white";
 		itemName.style.background = "#424242";
 		list.style.background = "#424242";
-		buttonColor = "#35afbd";
-		nightIcon[0].style.color = "white";	
+		buttonColor = "#08cf89";
+		nightIcon.style.color = "white";	
 		header[0].style.background="linear-gradient(-45deg, #ffd15c, #61d63d, #0062f7)"
 		header[0].style.backgroundSize="400% 400%"
 		darkMode = true;
@@ -173,7 +173,7 @@ function darkmodeEnable(){
 		itemName.style.background = "#f1f0f0";
 		list.style.background = "#f1f0f0";
 		buttonColor = "rgb(10, 2, 107)";
-		nightIcon[0].style.color = "black";	
+		nightIcon.style.color = "black";	
 		header[0].style.background="linear-gradient(-45deg, #291D98, #EC49E7, #FBBE62)"
 		header[0].style.backgroundSize="400% 400%"
 		darkMode = false;
@@ -186,7 +186,7 @@ function darkmodeEnable(){
 checkInputs();
 amount.onchange = checkInputs;
 itemName.onchange = checkInputs;
-nightIcon[0].addEventListener("click", darkmodeEnable);
+nightIcon.addEventListener("click", darkmodeEnable);
 accept.addEventListener("click", newItem);
 accept.addEventListener("click", updateSum);
 accept.addEventListener("click", populateStorage);

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>HTML5</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="untitled.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com"> 
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+ </head>
+ <body>
+    <div class="header">
+        <div>
+            <h1>Savings</h1>
+            <div class="menu">
+                <a href="untitled.html"><i class="far fa-sticky-note" id="note"></i></a>
+            
+                <i class="fas fa-calculator" id="calc" style="opacity: 0.5;"></i>
+                </div>
+        </div>
+        <p>Calculate how much money</br>you need to save</p>
+    </div>
+    <div class="main">
+        <div class="container">
+            <h2>Calculations</h2>
+            <i class="fas fa-adjust" id="dark"></i>
+        </div>
+        <form method="get" id="dropdown">
+            <label for="month">Amount of month</label></br>
+            <select id="month" name="month"> 
+              <option value="1">1</option>
+              <option value="3">3</option>
+              <option value="6">6</option>
+              <option value="8">8</option>
+              <option value="10">10</option>
+              <option value="12">12</option>
+            </select>
+            <label for="income">Average monthly income</label>
+            <input id="income" type="number" name="income" placeholder="25000">
+            <button id="submit">Submit</button>
+        </form>
+        <p id="total-sumup">Amount of month: <span id="month-total"></span>; Average monthly income: <span id="average-total"></span>&#8372;</p>
+        <p class="save">Save monthly <span id="saved-average"></span>&#8372;</p>
+        <p class="left">Left for living <span id="left-living"></span>&#8372;</p>
+        <div id="warning">You won't have enough money for living!</br>Try choosing more month.</div>
+        <div id="hoorey">Here is the amount of money you need to save!</br>Good luck with achieving goals!</div>
+    </div>
+        <script type="text/javascript" src="new.js"></script>
+        <script src="https://kit.fontawesome.com/95c76cd070.js" crossorigin="anonymous"></script>
+ </body>
+</html>

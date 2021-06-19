@@ -25,10 +25,67 @@ body {
 .header p {
 	font-size: 27px;
 	font-weight: 400;
+	display: flex;
+}
+
+.header div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .header h1 {
 	font-size: 82px;
+	display: flex;
+}
+
+#note, #calc {
+	font-size: 55px;
+	padding-right: 50px;
+}
+
+#calc {
+	padding-right: 100px;
+}
+
+#dropdown {
+	margin-top: 40px;
+}
+
+#dropdown label {
+	font-size: 28px;
+	font-weight: 500;
+	margin-left: 100px;
+
+
+}
+
+#dropdown select {
+	margin: 10px 100px;
+	width: 80%;
+	height:  100px;
+	border:  none;
+	background: #f1f0f0;
+	padding-left: 40px;
+	border-radius: 20px;
+	font-size: 28px;
+	font-weight: bolder;
+}
+
+#submit {
+	margin-bottom: 20px;
+}
+
+a:active {
+	color: white;
+}
+
+a:visited {
+	color: white;
+}
+
+.menu {
+	display: inline;
 }
 
 .main {
@@ -99,18 +156,66 @@ input {
 	height:  100px;
 	border:  none;
 	background: #f1f0f0;
-	padding-left: 20px;
+	padding-left: 40px;
 	border-radius: 20px;
 	font-size: 28px;
 	font-weight: bolder;
 }
 
-.total {
+.total, .save, .left {
 	font-size: 48px;
 	font-weight: bolder;
 	margin-left: 100px;
 	margin-bottom: 40px;
 	margin-top: 40px;
+}
+
+#total-sumup {
+	font-size: 28px;
+	font-weight: 500;
+	margin-left: 100px;
+	margin-top: 20px;
+}
+
+#month-total, #average-total {
+	font-weight: 700;
+	font-size: 32px;
+}
+
+#warning {
+	display: none;
+	align-items: center;
+	padding-left: 50px;
+	width: 80%;
+	height: 150px;
+	border-radius: 20px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	margin-left: 100px;
+	background: #f7b0cc;
+	color: #ad0045;
+	font-weight: 700;
+	font-size: 25px;
+}
+
+#hoorey {
+	display: none;
+	align-items: center;
+	padding-left: 50px;
+	width: 80%;
+	height: 150px;
+	border-radius: 20px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	margin-left: 100px;
+	background: #bff2e1;
+	color: #018c5c;
+	font-weight: 700;
+	font-size: 25px;
+}
+
+.left {
+	font-size: 32px;
 }
 
 .clear {
@@ -127,7 +232,7 @@ input {
 	align-items: center;
 }
 
-i {
+#dark {
 	font-size: 50px;
 	padding-top: 75px;
     padding-right: 100px;

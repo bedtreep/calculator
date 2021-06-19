@@ -8,6 +8,8 @@ var i=0;
 var totalAmount = 0;
 var integer;
 var listItems = document.getElementsByTagName('li');
+var clear = document.getElementsByClassName("clear");
+
 
 if(!localStorage.getItem("items")) {
 	console.log("bye");
@@ -20,21 +22,25 @@ if(!localStorage.getItem("items")) {
 function populateStorage() {
   localStorage.setItem("items", JSON.stringify(items));
   localStorage.setItem("totalsum", totalAmount);
+  localStorage.setItem("listsOfItems", document.getElementsByTagName("ul")[0].innerHTML);
   setStyles();
 }
 
 function setStyles() {
 	var newitems = JSON.parse(localStorage.getItem("items"));
 	var newtotalAmount = localStorage.getItem("totalsum");
+	var newList = localStorage.getItem("listsOfItems");
+
 	while( list.firstChild ){
   list.removeChild( list.firstChild );
 }
-	for (var k = 0; k <newitems.length; k++) {
+/*	for (var k = 0; k <newitems.length; k++) {
 		var li = document.createElement("li");
 		li.appendChild(document.createTextNode(newitems[k].join(" - ") + "₴"));
 		list.appendChild(li);
-	}
-	items = newitems;
+	}*/
+	items = newitems; 
+	list.innerHTML = localStorage.getItem("listsOfItems");
 	totalAmount = parseInt(newtotalAmount, 10);
 	sum.innerHTML = totalAmount;
 }
@@ -65,9 +71,28 @@ function updateSum(e) {
 	e.preventDefault();
 }
 
+function clearItems(e) {
+	localStorage.setItem("items", "[]");
+  localStorage.setItem("totalsum", 0);
+  localStorage.setItem("listsOfItems", "");
+  setStyles();
+  i=0;
+  console.log("cleared");
+  e.preventDefault();
+}
+
+function hide(e) {
+	e.target.style.textDecoration = "line-through";
+	e.target.className += "deleted";
+	e.target.style.color="grey";
+}
+
 
 accept.addEventListener("click", newItem);
 accept.addEventListener("click", updateSum);
 accept.addEventListener("click", populateStorage);
+clear[0].addEventListener("click", clearItems);
+list.addEventListener('click', hide, false);
+list.addEventListener("click", populateStorage);
 
 

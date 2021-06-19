@@ -54,6 +54,7 @@ body {
 	padding-top: 15px;
 	padding-bottom: 15px;
 	list-style: none;
+	cursor: pointer;
 }
 
 .main ul li img {
@@ -100,6 +101,14 @@ input {
 	margin-left: 100px;
 	margin-bottom: 40px;
 	margin-top: 40px;
+}
+
+.clear {
+	font-size: 22px;
+	text-decoration: underline;
+	cursor: pointer;
+	margin-left: 100px;
+	font-weight: 600;
 }
 
 @keyframes gradient {

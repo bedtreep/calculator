@@ -46,6 +46,7 @@ function setStyles() {
 }
 
 function newItem(e) {
+	i=items.length;
 	const n = itemName.value;
 	const m = amount.value;
 	var newArray = [];

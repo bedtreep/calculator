@@ -71,6 +71,9 @@ body {
 	font-size: 28px;
 	font-weight: bolder;
 	-webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
 }
 
 #submit {

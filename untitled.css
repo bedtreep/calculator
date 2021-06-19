@@ -2,6 +2,7 @@
 	font-family: 'Montserrat', sans-serif;
 	box-sizing: border-box;
 	margin: 0;
+	
 }
 
 body {
@@ -19,11 +20,10 @@ body {
 	padding-top: 125px;
 	padding-bottom: 250px;
 	padding-left: 100px;
-
 }
 
 .header p {
-	font-size: 30px;
+	font-size: 27px;
 	font-weight: 400;
 }
 
@@ -34,11 +34,12 @@ body {
 .main {
 	position: relative;
 	bottom: 75px;
-	
+	transition: color 0.2s, background 0.2s;
 	z-index: 10;
 	background: white;
 	border-top-left-radius: 75px;
 	border-top-right-radius: 75px;
+	min-height: 76vh;
 }
 
 .main h2 {
@@ -63,6 +64,7 @@ body {
 
 .main button {
 	margin-left: 100px;
+	margin-bottom: 100px;
 	border-radius: 20px;
 	border: none;
 	background: #0a026b;
@@ -117,6 +119,19 @@ input {
 	cursor: pointer;
 	margin-left: 100px;
 	font-weight: 600;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+i {
+	font-size: 50px;
+	padding-top: 75px;
+    padding-right: 100px;
+    cursor: pointer;
 }
 
 @keyframes gradient {

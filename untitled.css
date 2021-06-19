@@ -70,6 +70,7 @@ body {
 	border-radius: 20px;
 	font-size: 28px;
 	font-weight: bolder;
+	-webkit-appearance: none;
 }
 
 #submit {

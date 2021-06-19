@@ -12,7 +12,7 @@ var clear = document.getElementsByClassName("clear");
 var main = document.getElementsByClassName("main");
 var buttonColor = "rgb(10, 2, 107)";
 var nightIcon = document.getElementsByTagName("i");
-var darkMode;
+var darkMode = false;
 var header = document.getElementsByClassName("header");
 
 if(!localStorage.getItem("items")) {
@@ -45,8 +45,8 @@ function setStyles() {
 		var li = document.createElement("li");
 		li.appendChild(document.createTextNode(newitems[k].join(" - ") + "₴"));
 		list.appendChild(li);
-	}*/
-	darkMode = newDarkMode;
+	}
+	
 	if (darkMode == true || darkMode == "true") {
 		console.log("dark");
 		main[0].style.background = "#121212";
@@ -73,7 +73,14 @@ function setStyles() {
 		nightIcon[0].style.color = "black";	
 		header[0].style.background="linear-gradient(-45deg, #291D98, #EC49E7, #FBBE62)"
 		header[0].style.backgroundSize="400% 400%"
-	}
+	}*/
+
+	if (newDarkMode == "true") {
+		darkMode = false;}
+		else if (newDarkMode == "false") {
+			darkMode = true;
+		}
+	darkmodeEnable();
 	items = newitems; 
 	list.innerHTML = localStorage.getItem("listsOfItems");
 	totalAmount = parseInt(newtotalAmount, 10);
@@ -179,7 +186,6 @@ function darkmodeEnable(){
 checkInputs();
 amount.onchange = checkInputs;
 itemName.onchange = checkInputs;
-darkMode.onchange = populateStorage;
 nightIcon[0].addEventListener("click", darkmodeEnable);
 accept.addEventListener("click", newItem);
 accept.addEventListener("click", updateSum);

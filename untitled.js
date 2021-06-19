@@ -34,6 +34,7 @@ function setStyles() {
 	while( list.firstChild ){
   list.removeChild( list.firstChild );
 }
+	
 /*	for (var k = 0; k <newitems.length; k++) {
 		var li = document.createElement("li");
 		li.appendChild(document.createTextNode(newitems[k].join(" - ") + "₴"));

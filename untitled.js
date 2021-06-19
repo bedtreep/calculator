@@ -82,10 +82,15 @@ function clearItems(e) {
 }
 
 function hide(e) {
+	if (e.target && e.target.nodeName == "LI") {
 	e.target.style.textDecoration = "line-through";
 	e.target.className += "deleted";
 	e.target.style.color="grey";
+	var hiddenAmount = parseInt(e.target.innerText.split("-")[1].replace(/[^+\d]/g, ''),10);
+	totalAmount = totalAmount - hiddenAmount;
+	e.target.style.pointerEvents = "none";}
 }
+
 
 
 accept.addEventListener("click", newItem);

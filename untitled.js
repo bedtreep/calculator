@@ -34,7 +34,7 @@ function setStyles() {
 	while( list.firstChild ){
   list.removeChild( list.firstChild );
 }
-	
+
 /*	for (var k = 0; k <newitems.length; k++) {
 		var li = document.createElement("li");
 		li.appendChild(document.createTextNode(newitems[k].join(" - ") + "₴"));
@@ -61,6 +61,7 @@ function newItem(e) {
 	amount.value = "";
 	itemName.value = "";
 	e.preventDefault();
+	checkInputs();
 }
 
 
@@ -93,8 +94,21 @@ function hide(e) {
 	e.target.style.pointerEvents = "none";}
 }
 
+function checkInputs () {
+	if (amount.value == "" || itemName.value == "") {
+		accept.disabled = true;
+		accept.style.background = "#d1d1d1";
+		accept.style.cursor = "default";
+	} else {
+		accept.disabled = false;
+		accept.style.background = "#0a026b";
+		accept.style.cursor = "pointer";
+	}
+}
 
-
+checkInputs();
+amount.onchange = checkInputs;
+itemName.onchange = checkInputs;
 accept.addEventListener("click", newItem);
 accept.addEventListener("click", updateSum);
 accept.addEventListener("click", populateStorage);

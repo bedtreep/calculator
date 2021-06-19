@@ -10,6 +10,7 @@
  <body>
     <div class="header">
         <h1>Savings</h1>
+        <p>Calculate your money for your "want to buy"</p>
     </div>
     <div class="main">
         <h2>Items</h2>
@@ -19,7 +20,7 @@
         <p class="clear">Clear</p>
         <p class="total">Total <span id="sum"></span>&#8372;</p>
         <form method="get">
-        <input id="item_name" type="text" name="name" placeholder="Name"></br>
+        <input autocomplete="off" id="item_name" type="text" name="name" placeholder="Name"></br>
         <input id="amount" type="number" name="price" placeholder="1000"></br>
         <button id="accept">Add new item</button>
         </form>

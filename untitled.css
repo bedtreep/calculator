@@ -10,7 +10,7 @@ body {
 
 
 .header {
-	background: linear-gradient(-45deg, #60ffe4, #b0b92b, #cb336f, #008eff);
+	background: linear-gradient(-45deg,  #251ccb, #20f273, #ad1399, #02bfb7);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	font-weight: 700;
@@ -20,6 +20,11 @@ body {
 	padding-bottom: 250px;
 	padding-left: 100px;
 
+}
+
+.header p {
+	font-size: 30px;
+	font-weight: 400;
 }
 
 .header h1 {

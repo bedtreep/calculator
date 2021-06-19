@@ -10,7 +10,7 @@ body {
 
 
 .header {
-	background: linear-gradient(-45deg,  #251ccb, #20f273, #ad1399, #02bfb7);
+	background: linear-gradient(-45deg, #291D98, #EC49E7, #FBBE62);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	font-weight: 700;

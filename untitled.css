@@ -155,6 +155,10 @@ a:visited {
 	border-radius: 30px;
 }
 
+.main ul {
+	font-size: 28px;
+}
+
 #menu {
 	padding-left: 0px;
 	display: flex;

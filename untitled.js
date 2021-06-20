@@ -85,9 +85,17 @@ function setStyles() {
 	list.innerHTML = localStorage.getItem("listsOfItems");
 	totalAmount = parseInt(newtotalAmount, 10);
 	sum.innerHTML = totalAmount;
+	if (list.innerHTML.includes("li")) {
+	} else {
+		list.innerText="Your items will display here...";
+	}
 }
 
 function newItem(e) {
+	if (list.innerHTML.includes("li")) {
+	} else {
+		list.innerText="";
+	}
 	i=items.length;
 	const n = itemName.value;
 	const m = amount.value;
@@ -101,6 +109,7 @@ function newItem(e) {
 	i++;
 	amount.value = "";
 	itemName.value = "";
+
 	e.preventDefault();
 	checkInputs();
 }
@@ -120,6 +129,7 @@ function clearItems(e) {
   localStorage.setItem("totalsum", 0);
   localStorage.setItem("listsOfItems", "");
   setStyles();
+  list.innerText="Your items will display here...";
   i=0;
   console.log("cleared");
   e.preventDefault();

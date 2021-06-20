@@ -83,8 +83,10 @@ function calculations (e) {
   	localStorage.setItem("leftLiving", b);
 	if (parseInt(leftLiving.innerHTML,10) <= 7000) {
 		warning.style.display="flex";
+		hoorey.style.display="none";
 	} else {
 		warning.style.display="none";
+		hoorey.style.display="flex";
 	}
 }
 

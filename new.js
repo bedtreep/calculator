@@ -13,6 +13,7 @@ var darkMode = false;
 var main = document.getElementsByClassName("main");
 var header = document.getElementsByClassName("header");
 var nightIcon = document.getElementById("dark");
+var container = document.getElementById("total-container");
 
 if(!localStorage.getItem("items")) {
 	console.log("bye");
@@ -100,9 +101,9 @@ function darkmodeEnable(){
 		incomePicker.style.color = "white";
 		incomePicker.style.background = "#424242";
 		buttonColor = "#08cf89";
-		nightIcon.style.color = "white";	
 		header[0].style.background="linear-gradient(-45deg, #ffd15c, #61d63d, #0062f7)"
 		header[0].style.backgroundSize="400% 400%"
+		container.style.background="#424242";
 		darkMode = true;
 		localStorage.setItem("darkModeStatus", darkMode);
 	} else if (darkMode == true || darkMode == "true") {
@@ -114,9 +115,9 @@ function darkmodeEnable(){
 		incomePicker.style.color = "black";
 		incomePicker.style.background = "#f1f0f0";
 		buttonColor = "rgb(10, 2, 107)";
-		nightIcon.style.color = "black";	
 		header[0].style.background="linear-gradient(-45deg, #291D98, #EC49E7, #FBBE62)"
 		header[0].style.backgroundSize="400% 400%"
+		container.style.background="#f1f0f0";
 		darkMode = false;
 		localStorage.setItem("darkModeStatus", darkMode);
 	}

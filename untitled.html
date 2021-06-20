@@ -13,16 +13,23 @@
         <div>
             <h1>Savings</h1>
             <div class="menu">
-            <i class="far fa-sticky-note" id="note" style="opacity: 0.5;"></i>
-            <a href="calc.html"><i class="fas fa-calculator" id="calc"></i></a>
+                <i class="fas fa-adjust" id="dark"></i>
+         <!--   <i class="far fa-sticky-note" id="note" style="opacity: 0.5;"></i>
+            <a href="calc.html"><i class="fas fa-calculator" id="calc"></i></a> -->
         </div>
         </div>
         <p>Calculate your money</br>for your "want to buy"</p>
+        <div class="scrollmenu">
+          <a class="chosen" href="untitled.html">Items</a>
+          <a href="calc.html">Calculations</a>
+          <a href="">About</a>
+          <a href="">Links</a>
+        </div>
     </div>
     <div class="main">
         <div class="container">
             <h2>Items</h2>
-            <i class="fas fa-adjust" id="dark"></i>
+            
         </div>
         <ul id="list">
             
@@ -30,8 +37,10 @@
         <p class="clear">Clear</p>
         <p class="total">Total <span id="sum"></span>&#8372;</p>
         <form method="get">
-        <input autocomplete="off" id="item_name" type="text" name="name" placeholder="Name"></br>
-        <input id="amount" type="number" name="price" placeholder="1000"></br>
+        <label for="item_name">Name</label>
+        <input autocomplete="off" id="item_name" type="text" name="name" placeholder="New t-shirt"></br>
+        <label for="amount">Price</label>
+        <input id="amount" type="number" name="price" placeholder="1500"></br>
         <button id="accept">Add new item</button>
         </form>
     </div>

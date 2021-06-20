@@ -158,7 +158,7 @@ function darkmodeEnable(){
 		itemName.style.background = "#424242";
 		list.style.background = "#424242";
 		buttonColor = "#08cf89";
-		nightIcon.style.color = "white";	
+		
 		header[0].style.background="linear-gradient(-45deg, #ffd15c, #61d63d, #0062f7)"
 		header[0].style.backgroundSize="400% 400%"
 		darkMode = true;
@@ -173,7 +173,7 @@ function darkmodeEnable(){
 		itemName.style.background = "#f1f0f0";
 		list.style.background = "#f1f0f0";
 		buttonColor = "rgb(10, 2, 107)";
-		nightIcon.style.color = "black";	
+		
 		header[0].style.background="linear-gradient(-45deg, #291D98, #EC49E7, #FBBE62)"
 		header[0].style.backgroundSize="400% 400%"
 		darkMode = false;
